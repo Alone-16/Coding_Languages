@@ -1,0 +1,9 @@
+name,age,marks
+Alone,20,85
+Alex,21,90
+
+
+
+
+Each line = one record
+Used for tables, Excel, data storage

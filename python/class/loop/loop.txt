@@ -1,0 +1,20 @@
+Loop:
+    1. For Loop: 
+        Syntax:
+            for variable in sequence:
+                statement
+
+            e.g:
+            for i in range(0, 6):
+                print(i)
+
+            str1 = "English"
+            for chr in str1:
+                print(chr)
+
+    2. While loop:
+        Syntax:
+            While condition:
+                statement
+
+            

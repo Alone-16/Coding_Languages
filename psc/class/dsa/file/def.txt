@@ -1,0 +1,465 @@
+Unit I Introduction to DSA
+
+Operation:
+	arr[5] = 2;
+	Same syntax for updating, initializing, and removing.
+
+Traversal:
+    It means visiting each element (node) of a data structure exactly once in a systematic way to perform some operation (like printing, searching, or updating).
+
+Searching:
+	Searching is the process of finding a particular element in a data structure.
+
+
+
+Asymptotic Analysis
+    Analysis before running the code on the basis of time, space, and input size is called a priori analysis.
+    While or after running the code on the basis of language, machine/device, and test case is called posteriori analysis. 
+
+    Worst case: maximum input in the question O(n)
+    Best case: minimum number of steps to reach desired output
+    Average case: between best and worst (0, n]
+
+Asymptotic Notations
+    These notations are used for describing or representing the order of time complexity of an algorithm, such as:
+
+    • Growth rate is O(n) or O(time)
+    
+    1.	Big-O (Oh) Notation (Worst Case)
+        This describes the upper bound of an algorithm which states that the time taken for a function called f(n) must never grow more than the growth rate called g(n).
+        It always tells us the worst case of time complexity for an algorithm. 
+        f(n) = Og(n)
+        g(n) < C.g(n)   (g(n) = max = n unit)
+
+    2.	Big-Ω (Omega) Notation (Best Case)
+        f(n) = Ωg(n)
+        f(n) > C·g(n)
+
+    3.	Big-Θ (Theta) Notation
+        This notation describes the average time taken for an algorithm. This notation represents the practical time taken by an algorithm when the best and worst cases are the same.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Unit - II Arrays
+
+Array
+    -> Linear
+    -> Collection of homogeneous elements
+    -> Continuous memory allocation
+    -> Indexing 0 → (n - 1)
+    -> The memory is fixed
+    -> Types
+        - 1D Array
+        - 2D Array
+        - Multi-dimensional 
+    -> declaration
+        datatype array_name[n];
+        int arr[5] = {1, 2, 3, 4, 5};
+        int arr[] = {1, 2, 3, 4, 5};
+        int arr[5] = {1, 2, 3}; → by default, the rest of the two elements are zeros 
+
+
+Operation in array: (ADT)
+               Avg              Worst
+    Acess      O(1)             O(1)
+    Traversal  O(n)             O(n)
+    inertion/
+     deletion  O(n)             O(n)
+    Searching  
+
+Searching:
+    Linear search: arr = [10, 50, 40, 20, 70, 80, 90]
+        -> No requirement to be sorted
+        -> Given arr[7], key/target = 20
+        -> print i for key, print found or not found
+
+    Binary search: arr = [10, 20, 30, 40, 50, 60, 70]
+        -> divide and conquer approch
+        -> Required sorted array
+        -> low(0), high(n-1), mid = low + high
+        -> arr[mid]
+
+
+Dynamic Programming:
+    It is an algorithm in technique to solve problems by breaking them into smaller subproblem solving each subproblem only once and storing their values or result for future use.
+
+Memoization:
+    It is a approch in DP where recursion is used and the solution of previously solved sub problems are stored in a data structure(usally arr) so they can be reused. 
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Sorting:
+    eg. [20, 40, 15, 10, 25, 60]
+    sorted -> [10, 15, 20, 25, 40, 60]
+    
+    Order:
+        - incrementing (default)
+        - decsending
+    
+    Sorting Types:
+        1. Bubble Sort
+        2. Quick 
+        3. Selection
+        4. Insertion
+        5. Merge
+        6. Heap
+
+        1. Bubble Sort:
+            This sorting technique a simple comparision based algorithm which is used for sorting.
+            It repeatedly compares adjacent elements and swaps them if their in the wrong order.
+            With each pass the largest unsorted element bubbles up to its correct position (end of the arr).
+
+        2. Selection Sort:
+            selection sort is a comparison based algorithm that works by repeatedly selecting the smallest element from the unsorted part of the array and placing it in the begining of the array
+            Unlike bubble sort selection sort makes minimum swaps 
+        
+        3. Insertion Sort;
+            It is a comparision based algorithm that sorts an array by taking one element at a time and inserts it into in correct position in the already sorted part of the array.
+            eg. arranging the play card
+
+            Working principle:
+                step 1: Starts from the second element of the array (index 1) 
+                step 2: Store the correct element as the key 
+                step 3: Compare the key with all the elements before it.
+                step 4: Shift all element greater than key to one position right
+                step 5: Insert the key at its correct position 
+                step 6: Repeat until the array is sorted 
+            
+        4. Quick Sort:
+            It is a sorting algo based on devide and conquer approch which uses pivot element to divide the element into two parts 
+
+            Divide: The spliting of the array is based on the pivot element. all the elements which are less than pivot element must be in left subarray all the elements which are greater than pivot element 
+                must be right subarray.
+            Conquer: Recursively sort the two subarray 
+            Combine: No need to combine the subarray but grouping of all the elements of the array is needed to list out the sorted array 
+
+            Pivot element: A pivot element is the check point for spliting the array into two subarrays,
+                Pivot element can be selected as:
+                1. can be very first element in the array 
+                2. can be the very last element in the array 
+                3. can be any element in the array
+
+            Working principle: 
+                step 1: The given array must consist n number of integers
+                step 2: if n = 1, then return the array otherwise follow two steps
+                    a. Pick one element as pivot 
+                    b. Partition the elements into two subarrays 
+                step 3: if arr[i] <= arr[pivot] ? i++ : stopIncrementing 
+                step 4: if arr[j] > arr[pivot] ? j-- : stopDecrementing 
+                step 5: if both condition failed and i < j ? swap(arr[i], arr[j]) : swap(arr[pivot], arr[j])
+
+        5. Merge Sort:
+            It is an sorting algorithm which uses divide and conquer approch by
+                > Dividing the array into two parts 
+                > Recursively sorts both halfs
+                > Mergers the sorted halfs into a single sorted array
+            
+            Working principle:
+                Divide: Split the array repeatedly until each subarray is consist of only one element 
+                Conquer: Sort smaller subarray using recursion
+                Merge: merge all the sorted subarray to form the sorted array 
+
+        
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Unit - 3 Linkedlist
+
+Dynamic Memory Allocation in C:
+    It is a process of allcoationg the memory during the execution of the program (run time) instead of complile time.
+    Memory is allocated from heap area using special function.
+
+    a. Static memory allocation have its limitaiton:
+        fixed size
+        memory wastage
+        no resizing of memory
+
+    b. But DMA allows:
+        flexible memory usage
+        effecieant memory utalization
+    
+    c. Runtime memory control
+    
+    Function in DMA:
+        1. malloc():
+            It allocates a block of memory of a specified size.
+            The memory allocated contains garbage values.
+            Returns null if allocation fails.
+
+            syntax: 
+                ptr_name = (datatype*)malloc(n * sizeof(datatype));
+        
+        2. calloc():
+            ...
+        
+        3. free():
+            It frees up the memory that was taken.
+
+            syntax:
+                free(ptr_name);
+
+
+1. Structure:
+    A structure is a user defined data type which is use to store different data type under one name
+    Unlike arrays it stores Heterogeneous data type.
+
+    Syntax: 
+        Struct StructureName {
+            data 1;
+            data 2;
+            data 3;
+        };
+
+        e.g.
+        #include <stdio.h>
+
+        Struct Student {
+            int roll_no;
+            char name[50];
+            float score;
+        };
+        // To access -> we use .
+
+        int main() {
+            struct Student s1;
+            s1.roll_no = 101;
+            s1.name[] = "Alone";
+            s1.score = 95.5;
+
+            // or struct student s1 = {101, "Alone", 95.5};
+        }
+    
+2. Linkedlist:
+    A Linkedlist is a collection of nodes where each node consist of data and also the address of the next node
+
+    Node syntax:
+        struct Node {
+            int data;
+            struct Node* next;
+        };
+    
+    Operations of Linkedlist:
+        a. Creation:
+            Creating a node: struct Node* newNode; //allocated the memory 
+
+            newNode = (struct Node*)malloc(sizeof(struct Node));
+        
+        # Display:
+            |10| |  --> Head
+                |20| |
+                    |30| |
+                        |40| |
+                            |50|Null|
+        b. Display:
+            void display(struct Node* head){
+                struct Node* temp = head;
+
+                while(temp -> next != NULL) {
+                    printf("%d", temp -> data);
+                    temp = temp -> next;
+                }
+            }
+        
+        c. Insertion:
+            1. Insertion at the begining:
+                struct Node* insertAtBegining(struct Node* head, int value) {
+                    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+                    newNode -> data = value;
+                    newNode -> next = head;
+                    return newNode;
+                }
+
+            2. Insertion at the End:
+                struct Node* insertAtEnd(struct Node* head, int value) {
+
+                    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+                    newNode -> data = value;
+                    newNode -> next = NULL;
+                
+                    struct Node* temp = head;
+                    while(temp != NULL) {
+                        temp = temp -> next;
+                    }
+                    temp -> next = newNode;
+                    
+                    return // confusion
+                }
+
+        c. Searching:
+            int search(struct Node* head, int key) {
+                struct Node* temp = head;
+                int pos = 1;
+
+                while(temp -> next != NULL) {
+                    if(temp -> data == key) {
+                        return pos;
+                    }
+
+                    temp = temp -> next;
+                    pos++;
+                }
+
+                return -1;
+            }
+        
+        d. Deletion:
+            1. Deletion at begining: 
+                void deletionAtBegining(struct Node** head) {
+                    if(*head == NULL) {return;}
+
+                    struct Node* temp = *head;
+                    *head = (*head) -> next;
+                    free(temp);
+                }
+            
+            2. Deletion at the End:
+                struct Node* deletionAtEnd(struct Node* head) {
+                    if(head == NULL) {return;}
+                    if((head) -> next == NULL) {
+                        free(head);
+                        return;
+                    }
+
+                    struct Node* temp = head;
+                    while(temp -> next -> next != NULL) {
+                        temp = temp -> next;
+                    }
+                    free(temp -> next);
+                    temp -> next = NULL;
+
+                    return head;
+                }
+            
+3. Stack:
+    A stack is a linear data structure in which the elements are inserted and deleted from the top.
+    The stack follow a principle called LIFO ( last in first out ).
+    e.g. Undo / Redo 
+
+     ____
+    |    |   -> top = Max(length) - 1
+     ____
+    |    |
+     ____
+    |    |
+     ____
+    |    |
+     ____
+    |    |
+     ____
+
+     > If the array is empty => if(top == -1) {return "stack empty";}
+     > If the array is full then => top == Max - 1;
+
+    Operations:
+        a. push() -> insertion 
+        b. pop() -> deletion 
+        c. peek() -> display top
+
+    Cases:
+        1. Overflow:
+            if we push()
+            -> Check the value of top 
+                if top = max - 1; then stack is overflowing
+
+        2. Underflow:
+            if we pop()
+            -> Check the value of top 
+                if top = -1; then stack is underflow
+        
+    Syntax of Operations:
+        a. push():
+            void push (int value) {
+                if (top == MAX - 1) {
+                    printf("Stack is overflow");
+                    return;
+                }
+                
+                top++;
+                stack[top] = value;
+            }
+        
+        b. pop():
+            void pop () {
+                if (top == -1) {
+                    printf("Stack is underflow");
+                    return;
+                }
+
+                stack[top];
+                top--;
+            }
+        
+        c. peek():
+            void peek () {
+                if (top == -1) {
+                    printf("Stack is underflow");
+                    return;
+                }
+
+                printf("%d", stack[top]);
+            }
+        
+4. Queue:
+    Queue is a linear data structure in which insertion happens at one end and deletion happens at other end.
+    Queue follows a principle called FIFO (first in first out).
+
+     ____
+    |    |   -> front (deletion)
+     ____
+    |    |
+     ____
+    |    |
+     ____
+    |    |
+     ____
+    |    |   -> rear (insertion)
+     ____
+
+    
+    Operations:
+        a. enqueue (insertion)
+        b. dequeue (deletion)
+    
+    Syntax of Operations:
+        a. enqueue:
+            void enqueue(int value) {
+                if (rear == MAX - 1) {
+                    printf("Queue overflow\n");
+                    return;
+                } 
+
+                if (front == -1) {
+                    front = 0;
+                }
+
+                rear++;
+                queue[rear] = value;
+            }
+        
+        b. dequeue:
+            void dequeue() {
+                if (front == -1 || front > rear) {
+                    printf("Queue underflow\n");
+                    return;
+                }
+
+                front++;
+
+                if (front > rear) {
+                    front = rear = -1;
+                }
+            }
+        
+        c. display:
+            void display() {
+                if (front == -1 || front > rear) {
+                    printf("Queue is empty\n");
+                    return;
+                }
+
+                for(int i = front; i <= rear; i++) {
+                    printf("%d", queue[i]);
+                }
+                printf("\n");
+            }
+        

@@ -1,0 +1,23 @@
+Q. Explain why data structures are needed with a real-life example?
+-> Data structure are needed for maitain large amount of data in simplified and organized way so it can be accesed efficiently
+    (less time and effort), find easily. like when me need to find a book in a library when the book is put in random or messy way
+    it will take too much time and effort to find the book, and if the book was organised and put in geners and in an order we can
+    find it very easily in less amount of time.
+
+Q. What is the difference between data and data stucture?
+-> data mean the info or a particular item or thing. and data structure mean how is the data organised and which can help in keeping 
+    the data in organised way.
+    
+    => Data structure helps in storing and processing data efficiently
+
+Q. Give one example where a poor data structure choice can slow down a program.
+-> When data which can be in group are stored individualy, when we can use array to stored same type of data info in one place so we
+    can find and use it easily
+
+    For exam:
+        If related data is stored individually in separate variables instead of using an array, the program becomes slow and difficult
+        to manage because accessing and searching data requires more operations. Using an array stores similar data in one place, making
+        access faster and more efficient.
+
+Q. Name any three data structure and write one use case for each.
+-> 

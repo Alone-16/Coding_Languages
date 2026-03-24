@@ -1,0 +1,28 @@
+Regular expression:
+    It is a pattern through which we can:-
+        1. text search
+        2. text match
+        3. text validation
+        4. text replace
+
+Why do we learn regular expression:
+    1. Data validation (eg. form, company info)
+    2. Input checking
+    3. Data cleaning
+    4. Searching
+
+Import re 
+    re.match()
+    re.search()
+    re.findall()
+    re.sub()
+
+Meta character 
+    1. .
+    2. ^
+    3. $
+    4. * ,, + ? etc
+
+character classes
+    ..quantifiers 
+

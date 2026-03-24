@@ -1,0 +1,43 @@
+Operator:
+    operator are the symbol that are used to perform operations on operands (value/variable)
+
+    1. Arithmetic Operator: 
+        Addition (+)
+        Substraction (-)
+        Division (/)
+        Multiplication (*)
+        Modulus (%)
+        Floor Division (//)
+        Exponent (**)
+
+    2. Comparision Operator:
+        equal to (==)
+        less than (>)
+        greater than (<)
+        not equal to (!=)
+        less than equal to (>=)
+        greater than equal to (<=)
+
+    3. Logical Operator:
+        and 
+        or 
+        not
+        
+    4. Assignment Operator:
+        equal (=)
+        addition assignment (+=)
+        substraction assignment (-+)
+        multiplication assignment (*=)
+        division assignment (/=)
+
+    -> Arithmetic > Comparision > Logical > Assignment
+
+    -> bracket > exponent > multiplication, division, floor division, modulus > addition, substraction > comparision > logical> and, or, not
+    
+
+Control flow:
+    In python it means statements will execute in which order.
+    normally in python execution is done top to bottom but with the help of control flow we can change the flow of execution
+    
+
+
